@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 // import PropTypes from 'prop-types';
 import { FaBars } from 'react-icons/fa';
 import { Link as RouterLink } from 'react-router-dom';
-import { FlexLayout, Box } from '../primitives';
+import { FlexLayout, Box, Button } from '../primitives';
 import NavWrapper, {
   Logo,
   MobileIcon,
@@ -11,7 +11,6 @@ import NavWrapper, {
   ButtonWrapper,
 } from './styles';
 import NavOverlay from './Overlay';
-import Button from '../Button';
 
 import { LINKS } from '../../data/navbar';
 

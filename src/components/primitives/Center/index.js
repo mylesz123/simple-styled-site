@@ -17,7 +17,7 @@ export default function Center({
 }
 
 Center.propTypes = {
-  className: PropTypes.string,
   children: PropTypes.node,
+  className: PropTypes.string,
   totallyCentered: PropTypes.bool,
 };
