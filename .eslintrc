@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "wesbos"
+  ],
+  "rules": {
+    "no-console": 1,
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "es5",
+        "singleQuote": true,
+        "printWidth": 70
+      }
+    ],
+    "react/sort-prop-types": 1,
+    "no-nested-ternary": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/prop-types": 1,
+    "no-plusplus": "off"
+  }
+}
