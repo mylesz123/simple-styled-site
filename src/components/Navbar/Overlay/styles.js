@@ -50,7 +50,7 @@ export const Link = styled(SmoothLink)`
   cursor: pointer;
 
   &:hover,
-  &:active {
+  &.active {
     transition: all 0.2s ease-in-out;
     color: ${COLORS.RED};
   }

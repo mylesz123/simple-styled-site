@@ -13,9 +13,14 @@ const BannerSection = styled.section`
 
   .content {
     position: inherit;
+
+    .stack {
+      align-items: center;
+    }
   }
 
   @media screen and (max-width: ${BREAKPOINTS.XLPHONE}) {
+    height: 100vh;
     justify-content: center;
   }
 `;

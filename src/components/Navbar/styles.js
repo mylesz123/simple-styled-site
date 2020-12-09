@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Link as RouterLink } from 'react-router-dom';
+// import { Link as RouterLink } from 'react-router-dom';
 import { Link as SmoothLink } from 'react-scroll';
 
 import { BREAKPOINTS, COLORS } from '../constants';
@@ -8,7 +8,6 @@ import { BREAKPOINTS, COLORS } from '../constants';
 const NavWrapper = styled.nav`
   background: ${COLORS.BLACK};
   height: 80px;
-  /* margin-top: -80px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,7 +21,7 @@ const NavWrapper = styled.nav`
   }
 `;
 
-export const Logo = styled(RouterLink)`
+export const Logo = styled(SmoothLink)`
   color: ${COLORS.WHITE};
   cursor: pointer;
   display: flex;
@@ -71,7 +70,7 @@ export const Link = styled(SmoothLink)`
   cursor: pointer;
 
   &:hover,
-  &:active {
+  &.active {
     transition: all 0.2s ease-in-out;
     color: ${COLORS.RED};
   }

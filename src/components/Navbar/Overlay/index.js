@@ -23,6 +23,9 @@ const NavOverlay = ({
               key={link.path}
               to={link.path}
               onClick={toggleIsOpen}
+              smooth
+              spy
+              offset={-80}
             >
               {link.title}
             </Link>

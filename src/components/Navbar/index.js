@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 // import PropTypes from 'prop-types';
 import { FaBars } from 'react-icons/fa';
 import { Link as RouterLink } from 'react-router-dom';
+import { SECTION_PATHS, LINKS } from '../../data/navbar';
 import { FlexLayout, Box, Button } from '../primitives';
 import NavWrapper, {
   Logo,
@@ -12,8 +13,6 @@ import NavWrapper, {
 } from './styles';
 import NavOverlay from './Overlay';
 
-import { LINKS } from '../../data/navbar';
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState();
   const toggleIsOpen = () => setIsOpen(!isOpen);
@@ -23,7 +22,9 @@ const Navbar = () => {
       <NavOverlay {...{ links: LINKS, isOpen, toggleIsOpen }} />
       <NavWrapper>
         <FlexLayout justifyContent="space-between" fillAvailableSpace>
-          <Logo to="/">something</Logo>
+          <Logo to={SECTION_PATHS.BANNER} smooth>
+            something
+          </Logo>
 
           <MobileIcon>
             <FaBars onClick={toggleIsOpen} />
@@ -31,7 +32,9 @@ const Navbar = () => {
           <Menu>
             {LINKS.map((link) => (
               <Box key={link.path}>
-                <Link to={link.path}>{link.title}</Link>
+                <Link to={link.path} smooth spy offset={-80}>
+                  {link.title}
+                </Link>
               </Box>
             ))}
           </Menu>

@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 
 import { Link as SmoothLink } from 'react-scroll';
 import Video from '../../assets/videos/video.mp4';
+import { SECTION_PATHS } from '../../data/navbar';
 
 import { Button, StackLayout, Center } from '../primitives';
 
@@ -19,12 +20,12 @@ const Banner = () => {
   const [hover, setHover] = useState(false);
   const toggleHoverEffect = () => setHover(!hover);
   return (
-    <BannerSection id="bannerSection">
+    <BannerSection id={SECTION_PATHS.BANNER}>
       <VideoWrapper>
         <VideoBg autoPlay loop muted type="video/mp4" src={Video} />
       </VideoWrapper>
       <Center className="content" totallyCentered>
-        <StackLayout gap={3}>
+        <StackLayout className="stack">
           <Heading>something</Heading>
           <Text>
             This will be something big one day, but for now it's
@@ -36,7 +37,12 @@ const Banner = () => {
             onMouseEnter={toggleHoverEffect}
             onMouseLeave={toggleHoverEffect}
           >
-            <SmoothLink to="/">
+            <SmoothLink
+              to={SECTION_PATHS.ABOUT}
+              smooth
+              spy
+              offset={-80}
+            >
               Learn More {hover ? <LongButtonIcon /> : <ButtonIcon />}
             </SmoothLink>
           </Button>
