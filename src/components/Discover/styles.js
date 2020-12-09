@@ -65,6 +65,9 @@ export const Text = styled.p`
 export const ImageWrapper = styled.aside`
   max-width: 400px;
   height: 100%;
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 export const Image = styled.img`

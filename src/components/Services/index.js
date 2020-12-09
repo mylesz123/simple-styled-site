@@ -2,13 +2,7 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import { SECTION_PATHS } from '../../data/navbar';
 import { SERVICE_CARDS } from '../../data/services';
-import {
-  FlexLayout,
-  Grid,
-  Box,
-  Center,
-  StackLayout,
-} from '../primitives';
+import { FlexLayout, Box, StackLayout } from '../primitives';
 import ServiceSection, {
   Card,
   CardHeading,
@@ -23,9 +17,9 @@ const Services = () => (
       <Box size="large">
         <Heading>Provided Services</Heading>
       </Box>
-      <FlexLayout justifyContent="space-evenly">
+      <FlexLayout className="stack" justifyContent="space-evenly">
         {SERVICE_CARDS.map((card) => (
-          <Card>
+          <Card key={card.title}>
             <Image src={card.img} />
             <CardHeading>{card.title}</CardHeading>
             <Description>{card.description}</Description>

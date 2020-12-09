@@ -62,6 +62,11 @@ export const ImageWrapper = styled.aside`
   max-width: 450px;
   height: 100%;
   grid-column: 2;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
   @media screen and (max-width: ${BREAKPOINTS.XLPHONE}) {
     grid-column: 1;
     grid-row: 1;
