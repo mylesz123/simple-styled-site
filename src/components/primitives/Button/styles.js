@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { COLORS } from '../../constants';
 
 const ButtonWrapper = styled.button`
+  width: fit-content;
   outline: none;
   border: none;
   text-align: center;
