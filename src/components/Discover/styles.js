@@ -63,12 +63,12 @@ export const Text = styled.p`
 `;
 
 export const ImageWrapper = styled.aside`
-  max-width: 450px;
+  max-width: 400px;
   height: 100%;
 `;
 
 export const Image = styled.img`
-  width: 90%;
+  width: 100%;
   padding: 1em;
 `;
 

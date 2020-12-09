@@ -15,7 +15,7 @@ import AboutSection, {
 const About = () => (
   <AboutSection id={SECTION_PATHS.ABOUT}>
     <Center totallyCentered fillAvailableSpace>
-      <Grid fillAvailableSpace minColumnWidth={500} gap={3}>
+      <Grid fillAvailableSpace minColumnWidth={500} gap={0}>
         <StackLayout className="stack" as="aside">
           <Title>say a thing</Title>
           <Heading>splash</Heading>

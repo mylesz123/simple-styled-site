@@ -7,10 +7,6 @@ const AboutSection = styled.section`
   padding: 0 30px;
   height: 800px;
 
-  @media screen and (max-width: ${BREAKPOINTS.XLPHONE}) {
-    height: 100vh;
-  }
-
   .stack {
     @media screen and (max-width: ${BREAKPOINTS.XLPHONE}) {
       justify-self: flex-end;

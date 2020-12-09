@@ -15,7 +15,7 @@ import DiscoverSection, {
 const Discover = () => (
   <DiscoverSection id={SECTION_PATHS.DISCOVER}>
     <Center totallyCentered fillAvailableSpace>
-      <Grid fillAvailableSpace minColumnWidth={300} gap={3}>
+      <Grid fillAvailableSpace minColumnWidth={300} gap={0}>
         <ImageWrapper>
           <Image src={COUNTING_STARS} />
         </ImageWrapper>
