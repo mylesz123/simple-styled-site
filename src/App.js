@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Banner from './components/Banner';
 import About from './components/About';
 import Discover from './components/Discover';
+import Services from './components/Services';
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <Navbar />
       <Banner />
       <About />
+      <Services />
       <Discover />
     </BrowserRouter>
   );
