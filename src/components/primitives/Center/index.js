@@ -6,11 +6,14 @@ import CenterWrapper from './styles';
 export default function Center({
   className,
   children,
+  fillAvailableSpace = false,
   totallyCentered,
   ...rest
 }) {
   return (
-    <CenterWrapper {...{ className, totallyCentered, ...rest }}>
+    <CenterWrapper
+      {...{ className, fillAvailableSpace, totallyCentered, ...rest }}
+    >
       {children}
     </CenterWrapper>
   );
@@ -19,5 +22,6 @@ export default function Center({
 Center.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  fillAvailableSpace: PropTypes.bool,
   totallyCentered: PropTypes.bool,
 };

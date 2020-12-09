@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components';
 
 const CenterWrapper = styled.div`
-  min-width: auto;
+  min-width: ${({ fillAvailableSpace }) =>
+    fillAvailableSpace ? '-webkit-fill-available' : 'auto'};
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
