@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 const StackLayoutWrapper = styled.div`
+  min-width: ${({ fillAvailableSpace }) =>
+    fillAvailableSpace ? '-webkit-fill-available' : '0'};
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
