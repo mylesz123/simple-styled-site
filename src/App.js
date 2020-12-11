@@ -6,6 +6,7 @@ import Banner from './components/Banner';
 import About from './components/About';
 import Discover from './components/Discover';
 import Services from './components/Services';
+import Footer from './components/Footer';
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       <About />
       <Services />
       <Discover />
+      <Footer />
     </BrowserRouter>
   );
 }
