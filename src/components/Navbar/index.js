@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 // import PropTypes from 'prop-types';
 import { FaBars } from 'react-icons/fa';
 import { Link as RouterLink } from 'react-router-dom';
@@ -14,13 +14,24 @@ import NavWrapper, {
 import NavOverlay from './Overlay';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState();
+  const [isOpen, setIsOpen] = useState(false);
+  const [showBg, setShowBg] = useState(false);
   const toggleIsOpen = () => setIsOpen(!isOpen);
+
+  useEffect(() => {
+    const handleBg = () => {
+      window.addEventListener('scroll', () => {
+        setShowBg(window.scrollY > 100);
+      });
+    };
+    handleBg();
+    return () => window.removeEventListener('scroll', handleBg);
+  }, []);
 
   return (
     <>
       <NavOverlay {...{ links: LINKS, isOpen, toggleIsOpen }} />
-      <NavWrapper>
+      <NavWrapper {...{ showBg }}>
         <FlexLayout justifyContent="space-between" fillAvailableSpace>
           <Logo to={SECTION_PATHS.BANNER} smooth>
             something

@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 
-// import { Link as RouterLink } from 'react-router-dom';
 import { Link as SmoothLink } from 'react-scroll';
 
 import { BREAKPOINTS, COLORS } from '../constants';
 
 const NavWrapper = styled.nav`
-  background: ${COLORS.BLACK};
+  background: ${({ showBg }) =>
+    !showBg ? 'transparent' : COLORS.BLACK};
+  transition: 0.8s all ease;
+  margin-bottom: -80px;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -15,10 +17,6 @@ const NavWrapper = styled.nav`
   position: sticky;
   top: 0;
   z-index: 10;
-
-  @media screen and(max-width: ${BREAKPOINTS.TABLET}) {
-    transition: 0.8s all ease;
-  }
 `;
 
 export const Logo = styled(SmoothLink)`
