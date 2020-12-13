@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { COLORS, BREAKPOINTS } from '../constants';
+import { COLORS } from '../constants';
 
 const FooterWrapper = styled.footer`
   display: flex;
